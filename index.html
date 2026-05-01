@@ -1,4 +1,11 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenno Esportes — Uniformes de Futebol</title>
+</head>
+<body>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap');
   *{margin:0;padding:0;box-sizing:border-box}
@@ -250,6 +257,55 @@
   .reveal-delay-1{transition-delay:0.1s}
   .reveal-delay-2{transition-delay:0.2s}
   .reveal-delay-3{transition-delay:0.3s}
+
+  /* ===== RESPONSIVO MOBILE ===== */
+  @media(max-width:768px){
+    html{-webkit-text-size-adjust:100%;}
+
+    .hero{padding:48px 20px;min-height:90vh;}
+    .hero-tag{font-size:10px;padding:8px 16px;letter-spacing:1.5px;text-align:center;line-height:1.5;}
+    .hero-title{font-size:clamp(56px,16vw,90px);}
+    .hero-sub{font-size:17px;max-width:340px;margin:20px auto 36px;line-height:1.75;}
+    .hero-cta{padding:16px 32px;font-size:15px;}
+
+    .section{padding:48px 16px;}
+    .section-label{font-size:12px;letter-spacing:2.5px;}
+    .section-title{font-size:clamp(32px,9vw,52px);margin-bottom:12px;}
+    .section-desc{font-size:16px;line-height:1.75;margin-bottom:36px;}
+
+    .video-main{border-radius:8px;}
+
+    .lines-grid{gap:32px;max-width:100%;}
+    .line-card{border-radius:10px;}
+    .card-video-wrap{max-height:520px;border-radius:10px 10px 0 0;}
+
+    .card-body{padding:20px 18px 24px;}
+    .card-tier{font-size:11px;letter-spacing:2px;margin-bottom:12px;}
+    .card-name{font-size:32px;margin-bottom:10px;}
+    .card-desc{font-size:15px;line-height:1.7;margin-bottom:18px;}
+    .card-tags{gap:8px;}
+    .tag{font-size:12px;padding:6px 14px;}
+    .card-budget-btn{padding:16px 24px;font-size:15px;margin-top:18px;border-radius:8px;}
+
+    .badge-pop{font-size:10px;padding:5px 12px;top:10px;right:10px;}
+
+    .cta-section{padding:56px 20px;}
+    .cta-section .section-title{margin-bottom:20px !important;}
+
+    .footer{padding:28px 20px;font-size:13px;}
+  }
+
+  @media(max-width:400px){
+    .hero{padding:40px 16px;}
+    .hero-tag{font-size:9px;padding:6px 12px;}
+    .hero-sub{font-size:16px;}
+    .section{padding:40px 14px;}
+    .card-body{padding:18px 16px 22px;}
+    .card-name{font-size:28px;}
+    .card-desc{font-size:14px;}
+    .tag{font-size:11px;padding:5px 10px;}
+    .card-budget-btn{font-size:14px;padding:15px 20px;}
+  }
 </style>
 
 <!-- HERO -->
@@ -367,3 +423,5 @@
   },{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+</body>
+</html>

@@ -100,8 +100,8 @@
 
   /* CARDS DE LINHA */
   .lines-grid{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
+    display:grid;grid-template-columns:1fr;
+    gap:40px;max-width:720px;margin:0 auto;
   }
   .line-card{
     background:var(--mid);border-radius:12px;overflow:hidden;
@@ -117,7 +117,7 @@
   .line-card.inter:hover{border-color:rgba(224,123,57,0.5);box-shadow:0 24px 48px rgba(224,123,57,0.15);}
   .line-card.deluxe:hover{border-color:rgba(201,168,76,0.6);box-shadow:0 24px 48px rgba(201,168,76,0.2);}
 
-  .card-video-wrap{width:100%;aspect-ratio:16/9;background:#111;position:relative;overflow:hidden;}
+  .card-video-wrap{width:100%;aspect-ratio:9/16;max-height:580px;background:#111;position:relative;overflow:hidden;border-radius:12px 12px 0 0;}
   .card-video-wrap video,.card-video-wrap iframe{width:100%;height:100%;object-fit:cover;display:block;}
   .card-video-placeholder{
     width:100%;height:100%;display:flex;align-items:center;justify-content:center;
@@ -145,7 +145,7 @@
   .card-tier-dot{width:5px;height:5px;border-radius:50%;background:currentColor;}
 
   .card-name{
-    font-family:'Bebas Neue',sans-serif;font-size:28px;
+    font-family:'Bebas Neue',sans-serif;font-size:34px;
     letter-spacing:1px;color:var(--text);margin-bottom:8px;
   }
   .card-desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:20px;}
@@ -177,6 +177,22 @@
   .basic:hover .card-arrow{background:rgba(74,144,217,0.12);}
   .inter:hover .card-arrow{background:rgba(224,123,57,0.12);}
   .deluxe:hover .card-arrow{background:rgba(201,168,76,0.12);}
+
+  /* BOTÃO ORÇAMENTO NOS CARDS */
+  .card-budget-btn{
+    display:block;width:100%;margin-top:20px;padding:14px 24px;
+    border:none;border-radius:6px;cursor:pointer;
+    font-family:'DM Sans',sans-serif;font-weight:500;font-size:14px;
+    letter-spacing:1px;text-transform:uppercase;text-align:center;
+    transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;
+  }
+  .card-budget-btn:hover{transform:translateY(-2px);}
+  .basic .card-budget-btn{background:var(--basic);color:#fff;box-shadow:0 8px 24px rgba(74,144,217,0.25);}
+  .basic .card-budget-btn:hover{box-shadow:0 12px 32px rgba(74,144,217,0.4);}
+  .inter .card-budget-btn{background:var(--inter);color:#fff;box-shadow:0 8px 24px rgba(224,123,57,0.25);}
+  .inter .card-budget-btn:hover{box-shadow:0 12px 32px rgba(224,123,57,0.4);}
+  .deluxe .card-budget-btn{background:var(--deluxe);color:var(--dark);box-shadow:0 8px 24px rgba(201,168,76,0.25);}
+  .deluxe .card-budget-btn:hover{box-shadow:0 12px 32px rgba(201,168,76,0.4);}
 
   /* BADGE DESTAQUE */
   .badge-pop{
@@ -236,11 +252,9 @@
   .reveal-delay-3{transition-delay:0.3s}
 </style>
 
-<h2 class="sr-only">Mini LP — Uniformes Esportivos Personalizados: 3 linhas de tecido premium com apresentação em vídeo</h2>
-
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-tag">Uniformes Esportivos Personalizados</div>
+  <div class="hero-tag">Kenno Esportes · Linhas de tecido para futebol</div>
   <h1 class="hero-title">
     VISTA<br>
     <span>SUA</span><br>
@@ -263,21 +277,9 @@
   <p class="section-desc">Confira como cada tecido se comporta na prática — resistência, caimento e acabamento em um só vídeo.</p>
 
   <div class="video-main">
-    <div class="video-placeholder">
-      <div class="play-btn">▶</div>
-      <span>Adicione aqui seu vídeo com todas as linhas</span>
-      <span style="font-size:11px;opacity:0.5">Substitua este bloco por uma tag &lt;video&gt; ou &lt;iframe&gt;</span>
-    </div>
+    <iframe src="https://www.youtube.com/embed/ySIrv_w0Cu0" title="Diferença de todas as linhas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
-  <div class="instruction-box" style="margin-top:20px;margin-bottom:0">
-    <h3>Como adicionar seus vídeos</h3>
-    <ul class="step-list">
-      <li><span class="step-num">1</span>Se os vídeos estiverem no YouTube/Vimeo, use <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;font-size:12px">&lt;iframe src="URL_DO_VIDEO"&gt;</code> no lugar de cada placeholder</li>
-      <li><span class="step-num">2</span>Se forem arquivos locais (MP4), use <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;font-size:12px">&lt;video src="arquivo.mp4" controls&gt;</code></li>
-      <li><span class="step-num">3</span>Me diga os links ou envie os arquivos que eu atualizo o código para você ✓</li>
-    </ul>
-  </div>
 </section>
 
 <!-- LINHAS -->
@@ -288,76 +290,58 @@
 
   <div class="lines-grid">
 
-    <!-- BÁSICA -->
+    <!-- BÁSICA / PRATA -->
     <div class="line-card basic reveal reveal-delay-1">
       <div class="card-video-wrap">
-        <div class="card-video-placeholder">
-          <div class="card-play">▶</div>
-          <span>Vídeo — Linha Básica</span>
-        </div>
+        <iframe src="https://www.youtube.com/embed/6U4oitTOVFU" title="Linha Prata" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="card-body">
         <div class="card-tier"><div class="card-tier-dot"></div>Linha 01</div>
-        <div class="card-name">Básica</div>
+        <div class="card-name">Linha Prata</div>
         <p class="card-desc">Conforto do dia a dia com tecido leve e respirável. Ideal para treinos regulares e times em formação.</p>
         <div class="card-tags">
           <span class="tag">Leveza</span>
           <span class="tag">Respirável</span>
           <span class="tag">Custo-benefício</span>
         </div>
-        <div class="card-cta">
-          <span class="card-cta-label">Saiba mais</span>
-          <div class="card-arrow">→</div>
-        </div>
+        <a class="card-budget-btn" href="https://wa.me/554196981674?text=Ol%C3%A1!%20Me%20interessei%20pela%20Linha%20Prata%20e%20gostaria%20de%20receber%20um%20or%C3%A7amento.%20Podem%20me%20ajudar%3F" target="_blank">Solicitar Orçamento →</a>
       </div>
     </div>
 
-    <!-- INTERMEDIÁRIA -->
+    <!-- INTERMEDIÁRIA / OURO -->
     <div class="line-card inter reveal reveal-delay-2">
       <div class="card-video-wrap">
-        <div class="card-video-placeholder">
-          <div class="card-play">▶</div>
-          <span>Vídeo — Linha Intermediária</span>
-        </div>
+        <iframe src="https://www.youtube.com/embed/wzGD3Ajw3H4" title="Linha Ouro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="card-body">
         <div class="card-tier"><div class="card-tier-dot"></div>Linha 02</div>
-        <div class="card-name">Intermediária</div>
+        <div class="card-name">Linha Ouro</div>
         <p class="card-desc">Equilíbrio entre performance e preço. Tecido com tecnologia antimicrobiana e maior durabilidade.</p>
         <div class="card-tags">
           <span class="tag">Antimicrobiano</span>
           <span class="tag">Durável</span>
           <span class="tag">Performance</span>
         </div>
-        <div class="card-cta">
-          <span class="card-cta-label">Saiba mais</span>
-          <div class="card-arrow">→</div>
-        </div>
+        <a class="card-budget-btn" href="https://wa.me/554196981674?text=Ol%C3%A1!%20Me%20interessei%20pela%20Linha%20Ouro%20e%20gostaria%20de%20receber%20um%20or%C3%A7amento.%20Podem%20me%20ajudar%3F" target="_blank">Solicitar Orçamento →</a>
       </div>
     </div>
 
-    <!-- DELUXE -->
+    <!-- DELUXE / DIAMANTE -->
     <div class="line-card deluxe reveal reveal-delay-3">
       <div class="badge-pop">Premium</div>
       <div class="card-video-wrap">
-        <div class="card-video-placeholder">
-          <div class="card-play">▶</div>
-          <span>Vídeo — Linha Deluxe</span>
-        </div>
+        <iframe src="https://www.youtube.com/embed/uY6BEh8Wcrk" title="Linha Diamante" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="card-body">
         <div class="card-tier"><div class="card-tier-dot"></div>Linha 03</div>
-        <div class="card-name">Deluxe</div>
+        <div class="card-name">Linha Diamante</div>
         <p class="card-desc">O topo do catálogo. Tecido técnico de alto desempenho, acabamento impecável e personalização total.</p>
         <div class="card-tags">
           <span class="tag">Alto desempenho</span>
           <span class="tag">Personalização total</span>
           <span class="tag">Premium</span>
         </div>
-        <div class="card-cta">
-          <span class="card-cta-label">Saiba mais</span>
-          <div class="card-arrow">→</div>
-        </div>
+        <a class="card-budget-btn" href="https://wa.me/554196981674?text=Ol%C3%A1!%20Me%20interessei%20pela%20Linha%20Diamante%20e%20gostaria%20de%20receber%20um%20or%C3%A7amento.%20Podem%20me%20ajudar%3F" target="_blank">Solicitar Orçamento →</a>
       </div>
     </div>
 
@@ -368,12 +352,11 @@
 <div class="cta-section reveal">
   <p class="section-label">Pronto para começar?</p>
   <h2 class="section-title" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,64px);letter-spacing:1px;margin-bottom:24px;">Peça seu orçamento</h2>
-  <button class="hero-cta">Entrar em contato →</button>
-  <p>Atendimento personalizado · Produção rápida · Entrega para todo o Brasil</p>
+  <a class="hero-cta" href="https://wa.me/554196981674?text=Ol%C3%A1!%20Tenho%20interesse%20em%20uniformes%20de%20futebol%20personalizados%20para%20meu%20time%20e%20gostaria%20de%20receber%20um%20or%C3%A7amento.%20Podem%20me%20ajudar%3F" target="_blank" style="text-decoration:none">Entrar em contato →</a>
 </div>
 
 <footer class="footer">
-  Uniformes Esportivos Personalizados · Todos os direitos reservados
+  Kenno Esportes · Todos os direitos reservados
 </footer>
 
 <script>
